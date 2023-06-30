@@ -1,0 +1,80 @@
+<button class="arrowbutton" >
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
+<mat-card
+  color="primary"
+  class="card mat-elevation-z8"
+  style="
+    height: 300px;
+    width: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()"  (reset)="onReset()">
+    <mat-card-content>
+      <h2 style="text-align: center">
+        <b></b>
+      </h2>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-75 form-group labelname">
+            <label for="subject" style="margin-right: 10px">Branch Location
+            </label>
+          </div>
+
+          <div class="row">
+          <div class="col form-group">
+            <input class="form-control" type="text" formControlName="name"
+            [ngModel]="selectedLocation" placeholder="Enter location" (input)="convertToUppercase()">
+
+            <div
+              class="invalid-feedback">
+              <div >Location required</div>
+            </div>
+          </div>
+
+          <div class="col form-group" >
+            <mat-select class="form-control" name="selectedLocation"  [(ngModel)]="selectedLocation" placeholder="Available Locations">
+              <mat-option *ngFor="let loc of locations" [value]="locations">{{loc}}</mat-option>
+            </mat-select>
+          </div>
+
+        </div>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-75 form-group labelname">
+          <label for="topic" style="margin-right: 22px">Branch Name </label>
+        </div>
+        <div class="col-75 form-group">
+          <input
+            class="form-control"
+            type="text"
+            formControlName="description"
+            placeholder="Enter Branch"/>
+          <div
+            class="invalid-feedback">
+            <div >
+             field required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <div class="text-center">
+        <input class="btn btn-success btn-sm submit" type="submit"/>
+        <button class="btn btn-warning btn-sm ml-4" type="reset" id="buttons">
+          Clear
+        </button>
+        <button class="btn btn-secondary btn-sm ml-4" id="buttons">
+          Go back
+        </button>
+      </div>
+    </mat-card-content>
+  </form>
+</mat-card>
