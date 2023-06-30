@@ -1,5 +1,6 @@
 import { Branch } from "./branch";
 import { Course } from "./course";
+
 import { Trainee } from "./trainee";
 
 

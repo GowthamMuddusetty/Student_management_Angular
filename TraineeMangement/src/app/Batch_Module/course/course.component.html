@@ -1,0 +1,203 @@
+
+    <div id="top">
+      <button id="add-button" style="margin-left:6rem;" mat-button (click)="hide()">
+        <mat-icon><mat-icon>add_circle_outline</mat-icon></mat-icon>Add Course</button>
+
+    </div>
+
+    <div class="mt-4 mb-4" >
+      <div class="allign"  *ngFor="let course of getCourses()" >
+      <div class="warapper" >
+       <div class="div1 ml-2" >
+            <mat-card class="card ml-2" >
+               <!-- <mat-card-header>
+               <div mat-card-avatar><img src="./assets/java.png" alt="icon" height="50px" width="50px"></div>
+
+
+              </mat-card-header> -->
+
+               <mat-card-content>
+              <h2>Course Name: {{course.course_name}}</h2>
+              <h2>Course Fee:{{course.course_fee}}</h2>
+              <h2>Course Duration:{{course.course_duration}}</h2>
+              <h2>Subjects:{{course.subjects}}</h2>
+              </mat-card-content>
+
+
+             <mat-card-actions>
+                <button id="add-button" style="margin-left:6rem;" mat-button >
+                  <mat-icon><mat-icon>remove_red_eye</mat-icon></mat-icon>view details</button>
+              </mat-card-actions>
+
+
+            </mat-card>
+       </div>
+     </div>
+   </div>
+   </div>
+
+
+
+<!-- <div class="div2">
+        <mat-card class="card ml-5"  *ngFor="let course of getCourses()">
+          <mat-card-header>
+            <div mat-card-avatar><img src="./assets/python.jpg" alt="icon" height="50px" width="50px"></div>
+
+            <mat-card-title class="text-center ml-2">Course Name:  {{course.course_name}}</mat-card-title>
+
+          </mat-card-header>
+
+          <mat-card-content>
+          <h2>Course Fee:{{course.course_fee}}</h2>
+          <h2>Course Duration:{{course.course_duration}}</h2>
+
+          </mat-card-content>
+          <mat-card-actions>
+            <button id="add-button" style="margin-left:6rem;" mat-button (click)="getCourses()">
+              <mat-icon><mat-icon>remove_red_eye</mat-icon></mat-icon>viewcourse details</button>
+          </mat-card-actions>
+        </mat-card>
+       </div> -->
+
+
+
+ <!-- <div *ngIf="show">
+   <mat-form-field appearance="fill">
+    <mat-label>Course Name</mat-label>
+    <input matInput>
+   </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Course Fee</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Course Duration</mat-label>
+    <input matInput>
+  </mat-form-field>
+</div> -->
+<div *ngIf="show" id="add">
+  <form>
+  <table>
+    <tr>
+  <td>
+  <label>Course Name:</label>
+
+
+  <input type="text" required>
+</td>
+    </tr>
+    <tr>
+      <td>
+  <label>Course Fee:</label>
+
+
+  <input type="text" required>
+</td>
+</tr>
+<tr>
+  <td>
+  <label>Course Duration:</label>
+  <input type="text" required>
+  <br>
+  <input type="submit">
+</tr>
+</table>
+</form>
+</div>
+
+<!-- let cou of getcourses(); index of i;
+cou+i
+-->
+
+       <!-- div 2-->
+
+
+    <!-- <div class="div2">
+        <mat-card class="card ml-5"  *ngFor="let course of getCourses()">
+          <mat-card-header>
+            <div mat-card-avatar><img src="./assets/python.jpg" alt="icon" height="50px" width="50px"></div>
+
+            <mat-card-title class="text-center ml-2">Course Name:  {{course.course_name}}</mat-card-title>
+
+          </mat-card-header>
+
+          <mat-card-content>
+          <h2>Course Fee:{{course.course_fee}}</h2>
+          <h2>Course Duration:{{course.course_duration}}</h2>
+
+          </mat-card-content>
+          <mat-card-actions>
+            <button id="add-button" style="margin-left:6rem;" mat-button (click)="getCourses()">
+              <mat-icon><mat-icon>remove_red_eye</mat-icon></mat-icon>viewcourse details</button>
+          </mat-card-actions>
+        </mat-card>
+       </div> -->
+
+         <!-- div 3-->
+
+
+        <!-- <div class="div3">
+          <mat-card class="card ml-5"  *ngFor="let course of getCourses()">
+            <mat-card-header>
+              <div mat-card-avatar><img src="./assets/.Net.jpg" alt="icon" height="50px" width="50px"></div>
+
+              <mat-card-title class="text-center ml-2">Course Name:{{course.course_name}}</mat-card-title>
+
+            </mat-card-header>
+
+            <mat-card-content>
+            <h2>Course Fee:{{course.course_fee}}</h2>
+            <h2>Course Duration:</h2>
+
+            </mat-card-content>
+            <mat-card-actions>
+              <button id="add-button" style="margin-left:6rem;" mat-button (click)="getCourses()" routerLink="/batchhome/viewcourses" >
+                <mat-icon><mat-icon>remove_red_eye</mat-icon></mat-icon>viewcourse details</button>
+            </mat-card-actions>
+          </mat-card>
+           </div>
+           <div>
+            <table>
+              <tr>
+                <th>Course Name</th>
+                <th></th>
+              </tr>
+            </table>
+           </div> -->
+           <!-- <mat-form-field appearance="fill">
+            <mat-label>Course Name</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Select</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Textarea</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field> -->
+          <!-- <section>
+            <div class="row">
+              <div class="col-md-4" *ngFor="let course of getCourses()">
+                <mat-card class="example-card">
+                  <mat-card-header style="margin-bottom: 0.5rem;flex-direction:column">
+
+                  </mat-card-header>
+                  <mat-card-content>
+                    <h2>Course Name: {{course.course_name}}</h2>
+                    <h2>Course Fee:{{course.course_fee}}</h2>
+                    <h2>Course Duration:{{course.course_duration}}</h2>
+                 - <h2>Subjects:{{course.subjects}}</h2> -->
+
+                    <!-- </mat-card-content>
+
+                </mat-card>
+              </div>
+            </div>
+          </section> -->
+
+
+
