@@ -1,3 +1,4 @@
+
 import { Course } from "./course";
 import { Topic } from "./topic";
 import { Trainer } from "./trainer";
